@@ -46,13 +46,13 @@ def calc():
     st.markdown('**OR** directly input the drop rate of an item:')
     
     prob_percent = st.number_input('Item Drop Rate (in %):', 
-                           min_value = 0.0, max_value = 95.0, 
+                           min_value = 0.1, max_value = 95.0, 
                            value = 25.0 if chosen_idr == 'N/A' else low_drop_dict[chosen_idr], 
                            step = 0.1, format = "%.1f")
     
     p = prob_percent / 100  
  
-    interact_type = st.sidebar.radio('Choose how you would like to interact with the plots:', ['Slider', 'Manual Input'])
+    interact_type = st.sidebar.radio('Choose the method which you would like to interact with the plots:', ['Slider', 'Number Input'])
     
     if interact_type == 'Slider':
         xi = st.sidebar.slider('Choose number of tries:', 
