@@ -13,7 +13,7 @@ def main(): # Main title
     subtitle = '### Statistics of Drop Rates in AQWorlds'
     st.markdown(subtitle)
     
-    st.markdown('This web app is for the data visualisation of the drop rates in the MMORPG, AdventureQuest Worlds. Users can input the drop rate of an item and use a slider to see how the probability of obtaining an item changes as the number of tries increases.')
+    st.markdown('This web app is for the data visualisation of the drop rates in the MMORPG, AdventureQuest Worlds. Users can input the drop rate of an item and use a slider/number input to see how the probability of obtaining an item changes as the number of tries increases. Players may also view an in-depth explanation of how the drop rate probabilities are calculated by selecting the other box from the banner below.')
     
     st.components.v1.html("""<a href="https://github.com/tsu2000/drop_rates" target="_blank"><img src="https://img.shields.io/static/v1?label=tsu2000&message=drop_rates
 &color=blue&logo=github" alt="_blank"></a><a href="https://github.com/tsu2000/drop_rates" target="_blank"><img src="https://img.shields.io/github/stars/tsu2000/drop_rates?style=social" alt="tsu2000 - Drop Rates"></a>""", height=28)
