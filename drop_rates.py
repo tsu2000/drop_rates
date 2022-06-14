@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
+from streamlit import caching
 from scipy.stats import geom
 
 
@@ -71,7 +72,7 @@ def calc():
     st.sidebar.markdown('**Statistics:**')
     st.sidebar.markdown(f'Expected No. of Tries: &emsp;**{int(1/p)}**  \nStandard Deviation: &emsp;**{round(np.sqrt((1-p))/p, 2)}**  \n25th Percentile: &emsp;**{int(geom.ppf(0.25, p))}**  \nMedian: &emsp;**{int(geom.ppf(0.5, p))}**  \n75th Percentile: &emsp;**{int(geom.ppf(0.75, p))}**  \n99th Percentile: &emsp;**{int(geom.ppf(0.99, p))}**')
     
-    @st.cache(suppress_st_warning = True)
+    #@st.cache(allow_output_mutation = True, suppress_st_warning = True)
     def pmf():
         plt.style.use('seaborn-whitegrid')
         fig, ax = plt.subplots(figsize = (12, 6), dpi = 300)
@@ -94,7 +95,7 @@ def calc():
         plt.xlabel('Try Number')
         return st.pyplot(fig)
     
-    @st.cache(suppress_st_warning = True)
+    #@st.cache(allow_output_mutation = True, suppress_st_warning = True)
     def cdf():
         plt.style.use('seaborn-whitegrid')
         fig, ax = plt.subplots(figsize = (12, 6), dpi = 300)
