@@ -69,7 +69,7 @@ def calc():
                                      step = 1)
         
     st.sidebar.markdown('**Statistics:**')
-    st.sidebar.markdown(f'Expected No. of Tries: &emsp;**{int(1/p)}**\nStandard Deviation: &emsp;**{round(np.sqrt((1-p))/p, 2)}**\n25th Percentile: &emsp;**{int(geom.ppf(0.25, p))}**\nMedian: &emsp;**{int(geom.ppf(0.5, p))}**\n75th Percentile: &emsp;**{int(geom.ppf(0.75, p))}**\n99th Percentile: &emsp;**{int(geom.ppf(0.99, p))}**')
+    st.sidebar.markdown(f'Expected No. of Tries: &emsp;**{int(1/p)}**<br/>Standard Deviation: &emsp;**{round(np.sqrt((1-p))/p, 2)}**<br/>25th Percentile: &emsp;**{int(geom.ppf(0.25, p))}**<br/>Median: &emsp;**{int(geom.ppf(0.5, p))}**<br/>75th Percentile: &emsp;**{int(geom.ppf(0.75, p))}**<br/>99th Percentile: &emsp;**{int(geom.ppf(0.99, p))}**')
     
     #@st.cache(allow_output_mutation = True, suppress_st_warning = True)
     def pmf():
