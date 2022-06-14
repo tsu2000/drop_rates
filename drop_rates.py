@@ -46,7 +46,7 @@ def calc():
     st.markdown('**OR** directly input the drop rate of an item:')
     
     prob_percent = st.number_input('Item Drop Rate (in %):', 
-                           min_value = 0.0, max_value = 100.0, 
+                           min_value = 0.0, max_value = 95.0, 
                            value = 25.0 if chosen_idr == 'N/A' else low_drop_dict[chosen_idr], 
                            step = 0.1, format = "%.1f")
     
@@ -92,7 +92,7 @@ def calc():
         textstr = "\n".join([r'Probability of obtaining item on try no. $\bf{%s}$:' % str(xi),
                              f'{ryi}' + ' (around ' + r"$\bf" + str(round(yi * 100, 2)) + "\%}$" + ')'])
         props = dict(boxstyle = 'round', facecolor = 'azure')
-        plt.text(geom.ppf(0.9875, p), p, textstr, fontsize = 12, va = 'top', bbox = props)
+        plt.text(geom.ppf(0.975, p), p, textstr, fontsize = 12, va = 'top', bbox = props)
 
         plt.title('Individual probability of obtaining item with a ' + r"$\bf{" + str(p*100) + "\%}$" + ' drop rate')
         plt.ylabel('Probability of obtaining item')
@@ -117,7 +117,7 @@ def calc():
         textstr = "\n".join([r'Probability of obtaining item by try no. $\bf{%s}$:' % str(xi),
                              f'{ryi}' + ' (around ' + r"$\bf" + str(round(yi * 100, 2)) + "\%}$" + ')'])
         props = dict(boxstyle = 'round', facecolor = 'mistyrose')
-        plt.text(geom.ppf(0.9875, p), 0.15, textstr, fontsize = 12, va = 'top', bbox = props)
+        plt.text(geom.ppf(0.975, p), 0.15, textstr, fontsize = 12, va = 'top', bbox = props)
 
         plt.title('Cumulative probability of obtaining item with a ' + r"$\bf{" + str(p*100) + "\%}$" + ' drop rate')
         plt.ylabel('Probability of obtaining item')
