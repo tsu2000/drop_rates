@@ -38,10 +38,11 @@ def calc():
     
     st.markdown('Choose an item from the list below to get its drop rate: ')
     
-    low_drop_dict = {"Axeros' Brooch": 4.0,
-                     'Burning Blade of Abezeth': 1.0, 
-                     'Doom Heart': 0.5,
-                     'Runes of Awe': 0.1}
+    low_drop_dict = {'Burning Blade of Abezeth': 5.0,
+                     "Axeros' Brooch": 4.0,
+                     'Dark Unicorn Rib': 2.0,
+                     'Runes of Awe': 1.0,
+                     'Doom Heart': 0.5}
     
     chosen_idr = st.selectbox('Item', ['N/A'] + list(low_drop_dict.keys()))
     
