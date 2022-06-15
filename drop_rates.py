@@ -51,7 +51,7 @@ def calc():
     prob_percent = st.number_input('Item Drop Rate (in %):', 
                            min_value = 0.01, max_value = 95.00, 
                            value = 25.00 if chosen_idr == 'N/A' else low_drop_dict[chosen_idr], 
-                           step = 0.10, format = "%.2f")
+                           step = 0.01, format = "%.2f")
     
     p = prob_percent / 100  
  
