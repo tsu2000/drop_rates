@@ -92,7 +92,7 @@ def calc():
         props = dict(boxstyle = 'round', facecolor = 'azure')
         plt.text(geom.ppf(0.975, p), p, textstr, fontsize = 12, va = 'top', bbox = props)
 
-        plt.title('Individual probability of obtaining item with a ' + r"$\bf{" + str(p*100) + "\%}$" + ' drop rate')
+        plt.title('Individual probability of obtaining item with a ' + r"$\bf{" + str(round(p*100, 2)) + "\%}$" + ' drop rate')
         plt.ylabel('Probability of obtaining item')
         plt.xlabel('Try Number')
         return st.pyplot(fig)
@@ -117,7 +117,7 @@ def calc():
         props = dict(boxstyle = 'round', facecolor = 'mistyrose')
         plt.text(geom.ppf(0.975, p), 0.15, textstr, fontsize = 12, va = 'top', bbox = props)
 
-        plt.title('Cumulative probability of obtaining item with a ' + r"$\bf{" + str(p*100) + "\%}$" + ' drop rate')
+        plt.title('Cumulative probability of obtaining item with a ' + r"$\bf{" + str(round(p*100, 2)) + "\%}$" + ' drop rate')
         plt.ylabel('Probability of obtaining item')
         plt.xlabel('Cumulative Number of Tries')
         return st.pyplot(fig)
